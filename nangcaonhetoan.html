@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NÂNG CAO NHẸ TOÁN 12</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background: #E6E6FA;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    /* Logo JMP */
+    header .logo {
+      position: absolute;
+      left: 25px;
+      font-size: 28px;
+      font-weight: bold;
+      font-family: 'Times New Roman', serif;
+      background: linear-gradient(135deg, #8e44ad, #3498db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+      letter-spacing: 2px;
+      cursor: default;
+    }
+
+    header nav a {
+      margin: 0 30px;
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #8e44ad;
+    }
+      /* Highlight khi active */
+    nav a.active, .sidebar a.active {
+     color: #ff4d6d;
+     font-weight: bold;
+    border-bottom: 2px solid #ff4d6d;
+}
+
+
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 220px;
+      height: calc(100% - 70px);
+      background: rgba(255,255,255,0.3);
+      backdrop-filter: blur(6px);
+      padding: 20px;
+      box-sizing: border-box;
+      color: #333;
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: red;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      margin: 8px 0 8px 10px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .sidebar a:hover {
+      color: #8e44ad;
+    }
+    .sidebar b {
+      color: #c2410c;
+    }
+
+    /* Nội dung chính */
+    .main {
+      margin-left: 240px;
+      padding: 30px;
+    }
+
+    .intro {
+      background: #ede9fe;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    .intro h1 {
+      color: #4c1d95;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .intro p {
+      font-size: 17px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* Card container */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .card {
+      background: linear-gradient(135deg, #f3e8ff, #e0e7ff);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      color: #3730a3;
+    }
+    .card p {
+      font-size: 15px;
+      color: #333;
+    }
+    .card-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">JMP</div>
+    <nav>
+      <a href="menu.html">Trang chủ</a>
+      <a>Giới thiệu</a>
+      <a href="menu.html">Menu học tập</a>
+      <a href="lienhe.html">Liên hệ</a>
+    </nav>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>TOÁN</h2>
+    <a href="toan12.html"><b>Toán cơ bản 12</b></a>
+    <a href="bttoan.html">Bài tập Toán cơ bản 12</a>
+    <a href="nangcaonhetoan.html">Nâng cao nhẹ</a>
+    <a href="toanthucte.html">Toán thực tế</a>
+    <a href="thpttoan.html">Đề ôn thi TN THPT</a>
+
+    <h2>LÝ</h2>
+    <a href="ly12.html">Lý cơ bản 12</a>
+    <a href="btly.html">Bài tập Lý cơ bản 12</a>
+    <a href="nangcaonhely.html">Nâng cao nhẹ</a>
+    <a href="lythucte.html">Mô hình thực tế</a>
+    <a href="thptly.html">Đề ôn thi TN THPT</a>
+
+    <h2>HÓA</h2>
+    <a href="hoa12.html">Hóa cơ bản 12</a>
+    <a href="bthoa.html">Bài tập Hóa cơ bản 12</a>
+    <a href="nangcaonhehoa.html">Nâng cao nhẹ</a>
+    <a href="hoathucte.html">Mô hình thực tế</a>
+    <a href="thpthoa.html">Đề ôn thi TN THPT</a>
+
+    <h2>TIẾNG ANH</h2>
+    <a href="tienganh12.html">Từ vựng và ngữ pháp</a>
+    <a href="thpttanh.html">Đề ôn thi TN THPT</a>
+  </div>
+
+  <!-- Nội dung -->
+  <div class="main">
+    <div class="intro">
+      <h1>NÂNG CAO NHẸ TOÁN 12</h1>
+      <p>
+Phần này dành cho những bạn đã nắm chắc kiến thức cơ bản và muốn luyện tập thêm để nâng điểm. Nội dung được chọn lọc vừa sức, giúp bạn làm quen với các dạng bài nâng cao thường gặp trong đề thi THPT Quốc gia.
+</p>
+<p>
+Ở đây, bạn sẽ tìm thấy:
+</p>
+<p>
+Các chuyên đề Toán 12 nâng cao mức vừa phải.
+</p>
+<p>
+Bài tập có lời giải chi tiết, dễ theo dõi.
+</p>
+<p>
+Một số mẹo và phương pháp tư duy nhanh để xử lý câu hỏi khó.
+</p>
+<p>
+👉 Thích hợp cho học sinh muốn củng cố chắc chắn mức 7–8 điểm và thử sức hướng tới 9+.
+      </p>
+    </div>
+
+<div class="card-container">
+  <a href="nangcaonhetoan-dh.html" class="card">
+    <h3>Đạo hàm</h3>
+  </a>
+  <a href="nangcaonhetoan-tp.html" class="card">
+    <h3>Nguyên hàm - Tích phân</h3>
+
+  </a>
+  <a href="nangcaonhetoan-vt.html" class="card">
+    <h3>Vector trong không gian</h3>
+
+  </a>
+  <a href="nangcaonhetoan-xs.html" class="card">
+    <h3>Xác suất - Thống kê</h3>
+  </a>
+</div>
+
+
+</body>
+</html>

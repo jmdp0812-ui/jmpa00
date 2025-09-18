@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>VẬT LÝ NHIỆT - BÀI 4</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background: #E6E6FA;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    /* Logo JMP */
+    header .logo {
+      position: absolute;
+      left: 25px;
+      font-size: 28px;
+      font-weight: bold;
+      font-family: 'Times New Roman', serif;
+      background: linear-gradient(135deg, #8e44ad, #3498db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+      letter-spacing: 2px;
+      cursor: default;
+    }
+
+    header nav a {
+      margin: 0 30px;
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #8e44ad;
+    }
+      /* Highlight khi active */
+    nav a.active, .sidebar a.active {
+     color: #ff4d6d;
+     font-weight: bold;
+    border-bottom: 2px solid #ff4d6d;
+}
+
+
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 220px;
+      height: calc(100% - 70px);
+      background: rgba(255,255,255,0.3);
+      backdrop-filter: blur(6px);
+      padding: 20px;
+      box-sizing: border-box;
+      color: #333;
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: red;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      margin: 8px 0 8px 10px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .sidebar a:hover {
+      color: #8e44ad;
+    }
+    .sidebar b {
+      color: #c2410c;
+    }
+
+    /* Nội dung chính */
+    .main {
+      margin-left: 240px;
+      padding: 30px;
+    }
+
+    .intro {
+      background: #ede9fe;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    .intro h1 {
+      color: #4c1d95;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .intro p {
+      font-size: 17px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 30px 40px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #4b0082;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+      min-width: 120px;
+    }
+
+    .card:hover {
+      background: #dda0dd;
+      color: white;
+      transform: translateY(-5px);
+    }
+
+    a {
+      text-decoration: none;
+    }
+      table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background: #e9ecef;
+    }
+    .image {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .image img {
+      max-width: 300px;
+      border-radius: 10px;
+    }
+    footer {
+      background: #f1f1f1;
+      text-align: center;
+      padding: 10px;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">JMP</div>
+    <nav>
+      <a href="menu.html">Trang chủ</a>
+      <a>Giới thiệu</a>
+      <a href="menu.html">Menu học tập</a>
+      <a href="lienhe.html">Liên hệ</a>
+    </nav>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>TOÁN</h2>
+    <a href="toan12.html"><b>Toán cơ bản 12</b></a>
+    <a href="bttoan.html">Bài tập Toán cơ bản 12</a>
+    <a href="nangcaonhetoan.html">Nâng cao nhẹ</a>
+    <a href="toanthucte.html">Toán thực tế</a>
+    <a href="thpttoan.html">Đề ôn thi TN THPT</a>
+
+    <h2>LÝ</h2>
+    <a href="ly12.html">Lý cơ bản 12</a>
+    <a href="btly.html">Bài tập Lý cơ bản 12</a>
+    <a href="nangcaonhely.html">Nâng cao nhẹ</a>
+    <a href="lythucte.html">Mô hình thực tế</a>
+    <a href="thptly.html">Đề ôn thi TN THPT</a>
+
+    <h2>HÓA</h2>
+    <a href="hoa12.html">Hóa cơ bản 12</a>
+    <a href="bthoa.html">Bài tập Hóa cơ bản 12</a>
+    <a href="nangcaonhehoa.html">Nâng cao nhẹ</a>
+    <a href="hoathucte.html">Mô hình thực tế</a>
+    <a href="thpthoa.html">Đề ôn thi TN THPT</a>
+
+    <h2>TIẾNG ANH</h2>
+    <a href="tienganh12.html">Từ vựng và ngữ pháp</a>
+    <a href="thpttanh.html">Đề ôn thi TN THPT</a>
+  </div>   
+   <div class="main">
+    <div class="intro">
+    <h1>NHIỆT DUNG RIÊNG</h1>
+            <p><b>Nhiệt dung riêng (c)</b> của một chất là nhiệt lượng cần cung cấp để 1 kg chất đó tăng thêm 1°C (hoặc 1 K).</p>
+
+        <h3>Công thức</h3>
+        <p>Q = m·c·Δt</p>
+        <ul>
+          <li>Q: nhiệt lượng (J)</li>
+          <li>m: khối lượng (kg)</li>
+          <li>c: nhiệt dung riêng (J/kg·K)</li>
+          <li>Δt: độ biến thiên nhiệt độ (°C hoặc K)</li>
+        </ul>
+
+        <table>
+          <tr>
+            <th>Chất</th>
+            <th>Nhiệt dung riêng (J/kg·K)</th>
+          </tr>
+          <tr>
+            <td>Nước</td>
+            <td>4200</td>
+          </tr>
+          <tr>
+            <td>Nhôm</td>
+            <td>880</td>
+          </tr>
+          <tr>
+            <td>Sắt</td>
+            <td>460</td>
+          </tr>
+        </table>
+
+        <div class="image">
+          <img src="https://cdn3.olm.vn/upload/img_teacher/0428/img_teacher_2022-04-28_626a0dca1b229_Picture1q.png" alt="Vật hấp thụ nhiệt">
+          <p><i>Hình: Vật nhận nhiệt</i></p>
+        </div>
+
+<p>-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+    <h1>NHIỆT NÓNG CHẢY RIÊNG</h1>
+         <p><b>Nhiệt nóng chảy riêng (λ)</b> của một chất là nhiệt lượng cần cung cấp để 1 kg chất đó chuyển từ thể rắn sang thể lỏng (ở nhiệt độ nóng chảy xác định) mà không đổi nhiệt độ.</p>
+
+        <h3>Công thức</h3>
+        <p>Q = m·λ</p>
+        <ul>
+          <li>Q: nhiệt lượng (J)</li>
+          <li>m: khối lượng (kg)</li>
+          <li>λ: nhiệt nóng chảy riêng (J/kg)</li>
+        </ul>
+
+        <table>
+          <tr>
+            <th>Chất</th>
+            <th>Nhiệt nóng chảy riêng (J/kg)</th>
+          </tr>
+          <tr>
+            <td>Băng (nước đá)</td>
+            <td>3,4 × 10<sup>5</sup></td>
+          </tr>
+          <tr>
+            <td>Chì</td>
+            <td>2,3 × 10<sup>4</sup></td>
+          </tr>
+          <tr>
+            <td>Sắt</td>
+            <td>2,7 × 10<sup>5</sup></td>
+          </tr>
+        </table>
+
+        <div class="image">
+          <img src="https://tse4.mm.bing.net/th/id/OIP.G2pbT-l91UDE-l8Qay6CLQHaD8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Băng đá nóng chảy">
+          <p><i>Hình: Băng đá nóng chảy</i></p>
+        </div>
+<p>-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+    <h1>NHIỆT HÓA HƠI RIÊNG</h1>
+      <p><b>Nhiệt hóa hơi riêng (L)</b> của một chất là nhiệt lượng cần cung cấp để 1 kg chất lỏng đó biến thành hơi (ở nhiệt độ sôi xác định) mà không đổi nhiệt độ.</p>
+        <h3>Công thức</h3>
+        <p>Q = m·L</p>
+        <ul>
+          <li>Q: nhiệt lượng (J)</li>
+          <li>m: khối lượng chất lỏng (kg)</li>
+          <li>L: nhiệt hóa hơi riêng (J/kg)</li>
+        </ul>
+        <table>
+          <tr><th>Chất</th><th>Nhiệt hóa hơi riêng (J/kg)</th></tr>
+          <tr><td>Nước (100°C)</td><td>2,26 × 10<sup>6</sup></td></tr>
+          <tr><td>Cồn</td><td>8,5 × 10<sup>5</sup></td></tr>
+          <tr><td>Benzene</td><td>3,9 × 10<sup>5</sup></td></tr>
+        </table>
+        <div class="image">
+          <img src="https://photo-cms-tpo.epicdn.me/w890/Uploaded/2023/bqmvlcvo/2019_12_04/nuoc_soi_HCCY.jpg" alt="Nước sôi hóa hơi">
+          <p><i>Hình: Nước sôi hóa hơi</i></p>
+        </div>
+      <footer>
+    © 2025 - Bài học Vật lý 12: Nhiệt độ - Thang nhiệt độ - Nhiệt kế
+  </footer>
+  </body>
+  </html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <title>ĐẠO HÀM - CÔNG THỨC</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background: #E6E6FA;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    /* Logo JMP */
+    header .logo {
+      position: absolute;
+      left: 25px;
+      font-size: 28px;
+      font-weight: bold;
+      font-family: 'Times New Roman', serif;
+      background: linear-gradient(135deg, #8e44ad, #3498db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+      letter-spacing: 2px;
+      cursor: default;
+    }
+
+    header nav a {
+      margin: 0 30px;
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #8e44ad;
+    }
+      /* Highlight khi active */
+    nav a.active, .sidebar a.active {
+     color: #ff4d6d;
+     font-weight: bold;
+    border-bottom: 2px solid #ff4d6d;
+}
+
+
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 220px;
+      height: calc(100% - 70px);
+      background: rgba(255,255,255,0.3);
+      backdrop-filter: blur(6px);
+      padding: 20px;
+      box-sizing: border-box;
+      color: #333;
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: red;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      margin: 8px 0 8px 10px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .sidebar a:hover {
+      color: #8e44ad;
+    }
+    .sidebar b {
+      color: #c2410c;
+    }
+
+    /* Nội dung chính */
+    .main {
+      margin-left: 240px;
+      padding: 30px;
+    }
+
+    .intro {
+      background: #ede9fe;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    .intro h1 {
+      color: #4c1d95;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .intro p {
+      font-size: 17px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 30px 40px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #4b0082;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+      min-width: 120px;
+    }
+
+    .card:hover {
+      background: #dda0dd;
+      color: white;
+      transform: translateY(-5px);
+    }
+
+    a {
+      text-decoration: none;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background: #8e44ad;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background: #f8f8f8;
+    }
+    .group {
+      background: #eee;
+      font-weight: bold;
+      text-align: left;
+      font-size: 22px;
+      color: #ff0000;
+    }
+  </style>
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">JMP</div>
+    <nav>
+      <a href="menu.html">Trang chủ</a>
+      <a>Giới thiệu</a>
+      <a href="menu.html">Menu học tập</a>
+      <a href="lienhe.html">Liên hệ</a>
+    </nav>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>TOÁN</h2>
+    <a href="toan12.html"><b>Toán cơ bản 12</b></a>
+    <a href="bttoan.html">Bài tập Toán cơ bản 12</a>
+    <a href="nangcaonhetoan.html">Nâng cao nhẹ</a>
+    <a href="toanthucte.html">Toán thực tế</a>
+    <a href="thpttoan.html">Đề ôn thi TN THPT</a>
+
+    <h2>LÝ</h2>
+    <a href="ly12.html">Lý cơ bản 12</a>
+    <a href="btly.html">Bài tập Lý cơ bản 12</a>
+    <a href="nangcaonhely.html">Nâng cao nhẹ</a>
+    <a href="lythucte.html">Mô hình thực tế</a>
+    <a href="thptly.html">Đề ôn thi TN THPT</a>
+
+    <h2>HÓA</h2>
+    <a href="hoa12.html">Hóa cơ bản 12</a>
+    <a href="bthoa.html">Bài tập Hóa cơ bản 12</a>
+    <a href="nangcaonhehoa.html">Nâng cao nhẹ</a>
+    <a href="hoathucte.html">Mô hình thực tế</a>
+    <a href="thpthoa.html">Đề ôn thi TN THPT</a>
+
+    <h2>TIẾNG ANH</h2>
+    <a href="tienganh12.html">Từ vựng và ngữ pháp</a>
+    <a href="thpttanh.html">Đề ôn thi TN THPT</a>
+  </div>
+
+
+  <!-- Nội dung chính -->
+  <div class="main">
+    <div class="intro">
+    <h1>BẢN CHẤT CỦA ĐẠO HÀM LÀ GÌ?</h1>
+  <h2>1. Đạo hàm = tốc độ biến thiên tức thời</h2>
+  <p>• Đây là cách hiểu vật lý, gần gũi nhất.</p>
+  <p>• Khi ta có một hàm \( y = f(x) \), đạo hàm tại điểm \( x_0 \) là:</p>
+  <p>
+    \[
+      f'(x_0) = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}
+    \]
+  </p>
+  <p>• Tỉ số trên là tốc độ trung bình khi \( x \) thay đổi một lượng \( h \).</p>
+  <p>• Khi \( h \to 0 \), nó thành tốc độ tức thời: tại đúng điểm \( x_0 \), \( y \) đang thay đổi nhanh hay chậm như thế nào.</p>
+  <div class="note">
+    👉 Ví dụ: Quãng đường \( s(t) \), thì \( s'(t) \) là vận tốc tại đúng thời điểm \( t \).  
+    Nếu \( s'(t) > 0 \) → đang đi tới, \( s'(t) < 0 \) → đang lùi, \( |s'(t)| \) → tốc độ nhanh/chậm.
+  </div>
+
+  <h2>2. Đạo hàm = hệ số góc tiếp tuyến</h2>
+  <p>• Đây là cách hiểu hình học.</p>
+  <p>• Đồ thị \( y = f(x) \) tại điểm \( (x_0, f(x_0)) \) có tiếp tuyến. Độ dốc (slope) của tiếp tuyến này chính là \( f'(x_0) \).</p>
+  <p>Ví dụ: \( y = x^2 \) tại \( x = 1 \).</p>
+  <p>• Đạo hàm: \( f'(x) = 2x \Rightarrow f'(1) = 2 \).</p>
+  <p>• Nghĩa là tại điểm \( (1,1) \), đồ thị “nghiêng” lên với độ dốc 2.</p>
+  <p>• Nếu bạn vẽ đường thẳng tiếp tuyến ở đó, nó chính là đường \( y - 1 = 2(x - 1) \).</p>
+  <div class="note">
+    👉 Nhìn trực quan: đạo hàm “dịch” câu hỏi “hàm số cong thế nào” thành “nó nghiêng như đường thẳng nào tại điểm đó”.
+  </div>
+
+  <h2>3. Đạo hàm = phép toán tuyến tính (operator)</h2>
+  <p>• Đây là cách hiểu đại số/giải tích hiện đại.</p>
+  <p>• Ký hiệu \(\frac{d}{dx}\) không chỉ là một con số, mà là một <b>toán tử</b>: nó biến đổi một hàm thành một hàm khác.</p>
+  <p>Ví dụ:</p>
+  <p>
+    \[
+      \frac{d}{dx}(x^3) = 3x^2, \quad 
+      \frac{d}{dx}(\sin x) = \cos x
+    \]
+  </p>
+  <p>• Tính chất quan trọng: đạo hàm là một phép biến đổi tuyến tính:</p>
+  <p>
+    \[
+      \frac{d}{dx}\big( a f(x) + b g(x) \big) 
+      = a f'(x) + b g'(x)
+    \]
+  </p>
+  <p>(với \(a, b\) là hằng số).</p>
+  <p>• Nghĩa là đạo hàm giữ nguyên phép cộng và nhân với hằng số, giống như một ánh xạ tuyến tính trong đại số tuyến tính.</p>
+  <div class="note">
+    👉 Nhìn rộng hơn: Toán tử \(\tfrac{d}{dx}\) còn đóng vai trò trung tâm trong nhiều lĩnh vực hiện đại (giải phương trình vi phân, cơ học lượng tử, biến đổi Fourier, …).
+  </div>
+  <p>
+   </p>
+  <p> Đương nhiên, đây chỉ là thông tin tham khảo nếu các bạn muốn hiểu về bản chất của đạo hàm, nếu không có nhu cầu học thuộc thì khum cần học đâu nhé.</p>
+  <h1>Công thức đạo hàm</h1>
+
+  <table>
+    <tr>
+      <th>Hàm số f(x)</th>
+      <th>Đạo hàm f′(x)</th>
+    </tr>
+
+    <!-- Cơ bản -->
+    <tr class="group"><td colspan="2">⚡ Cơ bản</td></tr>
+    <tr><td>\( c \)</td><td>\( 0 \)</td></tr>
+    <tr><td>\( x \)</td><td>\( 1 \)</td></tr>
+    <tr><td>\( x^n \)</td><td>\( n x^{n-1} \)</td></tr>
+    <tr><td>\( \sqrt{x} \)</td><td>\( \dfrac{1}{2\sqrt{x}} \)</td></tr>
+    <tr><td>\( \dfrac{1}{x} \)</td><td>\( -\dfrac{1}{x^2} \)</td></tr>
+
+    <!-- Hàm hợp -->
+    <tr class="group"><td colspan="2">⚡ Quy tắc tính đạo hàm</td></tr>
+    <tr><td>\( (u \pm v) \)</td><td>\( u' \pm v' \)</td></tr>
+    <tr><td>\( (uv) \)</td><td>\( u'v + uv' \)</td></tr>
+    <tr><td>\( \left(\dfrac{u}{v}\right) \)</td><td>\( \dfrac{u'v - uv'}{v^2} \)</td></tr>
+    <tr><td>\( u(v(x)) \)</td><td>\( u'(v(x)) \cdot v'(x) \) (quy tắc chuỗi)</td></tr>
+
+    <!-- Lượng giác -->
+    <tr class="group"><td colspan="2">⚡ Lượng giác</td></tr>
+    <tr><td>\( \sin x \)</td><td>\( \cos x \)</td></tr>
+    <tr><td>\( \cos x \)</td><td>\( -\sin x \)</td></tr>
+    <tr><td>\( \tan x \)</td><td>\( \dfrac{1}{\cos^2 x} \)</td></tr>
+    <tr><td>\( \cot x \)</td><td>\( -\dfrac{1}{\sin^2 x} \)</td></tr>
+    <tr><td>\( \arcsin x \)</td><td>\( \dfrac{1}{\sqrt{1-x^2}} \)</td></tr>
+    <tr><td>\( \arccos x \)</td><td>\( -\dfrac{1}{\sqrt{1-x^2}} \)</td></tr>
+    <tr><td>\( \arctan x \)</td><td>\( \dfrac{1}{1+x^2} \)</td></tr>
+    <tr><td>\( \text{arccot}\, x \)</td><td>\( -\dfrac{1}{1+x^2} \)</td></tr>
+
+    <!-- Mũ - Log -->
+    <tr class="group"><td colspan="2">⚡ Hàm mũ – Logarit</td></tr>
+    <tr><td>\( e^x \)</td><td>\( e^x \)</td></tr>
+    <tr><td>\( a^x \, (a>0, a \neq 1) \)</td><td>\( a^x \ln a \)</td></tr>
+    <tr><td>\( \ln x \)</td><td>\( \dfrac{1}{x} \)</td></tr>
+    <tr><td>\( \log_a x \, (a>0, a \neq 1) \)</td><td>\( \dfrac{1}{x \ln a} \)</td></tr>
+
+    <!-- Nâng cao lớp 12 -->
+    <tr class="group"><td colspan="2">⚡ Một số công thức nâng cao (lớp 12)</td></tr>
+    <tr><td>\( u^n \)</td><td>\( n u^{n-1} \cdot u' \)</td></tr>
+    <tr><td>\( e^{u(x)} \)</td><td>\( e^{u(x)} \cdot u'(x) \)</td></tr>
+    <tr><td>\( a^{u(x)} \)</td><td>\( a^{u(x)} \ln a \cdot u'(x) \)</td></tr>
+    <tr><td>\( \ln(u(x)) \)</td><td>\( \dfrac{u'(x)}{u(x)} \)</td></tr>
+    <tr><td>\( \sin(u(x)) \)</td><td>\( \cos(u(x)) \cdot u'(x) \)</td></tr>
+    <tr><td>\( \cos(u(x)) \)</td><td>\( -\sin(u(x)) \cdot u'(x) \)</td></tr>
+    <tr><td>\( \tan(u(x)) \)</td><td>\( \dfrac{u'(x)}{\cos^2(u(x))} \)</td></tr>
+    <tr><td>\( \cot(u(x)) \)</td><td>\( -\dfrac{u'(x)}{\sin^2(u(x))} \)</td></tr>
+  </table>
+
+  </div>
+</div>
+</body>
+</html>
+

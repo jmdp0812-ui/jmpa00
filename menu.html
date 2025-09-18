@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>JMPA00 - TÀI LIỆU HỌC TẬP</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      margin: 0;
+      display: flex;
+      min-height: 100vh;
+      background: #E6E6FA; /* Lavender */
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    /* Logo JMP */
+    header .logo {
+      position: absolute;
+      left: 25px;
+      font-size: 28px;
+      font-weight: bold;
+      font-family: 'Times New Roman', serif;
+      background: linear-gradient(135deg, #8e44ad, #3498db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+      letter-spacing: 2px;
+      cursor: default;
+    }
+
+    header nav a {
+      margin: 0 30px;
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #8e44ad;
+    }
+      /* Highlight khi active */
+    nav a.active, .sidebar a.active {
+     color: #ff4d6d;
+     font-weight: bold;
+    border-bottom: 2px solid #ff4d6d;
+}
+
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 220px;
+      height: calc(100% - 70px);
+      background: rgba(255,255,255,0.3);
+      backdrop-filter: blur(6px);
+      padding: 20px;
+      box-sizing: border-box;
+      color: #333;
+      overflow-y: auto;
+    }
+
+    .sidebar h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: red;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      margin: 8px 0 8px 10px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #8e44ad;
+    }
+
+    /* Main content */
+    main {
+      margin-left: 240px;
+      margin-top: 90px;
+      padding: 20px;
+      flex: 1;
+      color: #333;
+    }
+
+    section {
+      margin-bottom: 60px;
+      padding: 25px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    section h1 {
+      margin-bottom: 15px;
+    }
+
+    /* Card Menu */
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .toan { color: #ff6f61; }
+    .ly { color: #4a90e2; }
+    .hoa { color: #50c878; }
+    .anh { color: #f39c12; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">JMP</div>
+    <nav>
+      <a href="#home">Trang chủ</a>
+      <a href="#about">Giới thiệu</a>
+      <a href="#menu">Menu học tập</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3>TOÁN</h3>
+    <a href="toan12.html"><b>Toán cơ bản 12</b></a>
+    <a href="bttoan.html">Bài tập Toán cơ bản 12</a>
+    <a href="nangcaonhetoan.html">Nâng cao nhẹ</a>
+    <a href="toanthucte.html">Toán thực tế</a>
+    <a href="thpttoan.html">Đề ôn thi TN THPT</a>
+
+    <h3>LÝ</h3>
+    <a href="ly12.html">Lý cơ bản 12</a>
+    <a href="btly.html">Bài tập Lý cơ bản 12</a>
+    <a href="nangcaonhely.html">Nâng cao nhẹ</a>
+    <a href="lythucte.html">Mô hình thực tế</a>
+    <a href="thptly.html">Đề ôn thi TN THPT</a>
+
+    <h3>HÓA</h3>
+    <a href="hoa12.html">Hóa cơ bản 12</a>
+    <a href="bthoa.html">Bài tập Hóa cơ bản 12</a>
+    <a href="nangcaonhehoa.html">Nâng cao nhẹ</a>
+    <a href="hoathucte.html">Mô hình thực tế</a>
+    <a href="thpthoa.html">Đề ôn thi TN THPT</a>
+
+
+    <h3>TIẾNG ANH</h3>
+    <a href="tienganh12.html">Từ vựng và ngữ pháp</a>
+    <a href="thpttanh.html">Đề ôn thi TN THPT</a>
+  </div>
+
+  <!-- Main content -->
+  <main>
+    <section id="home">
+      <h1>📘 Trang Chủ</h1>
+      <p>Chào mừng bạn đến với JMPA00 – nơi chia sẻ tài liệu, đề thi và kinh nghiệm ôn tập dành cho học sinh lớp 12 đang chuẩn bị cho kỳ thi THPT Quốc gia.
+
+      Website được xây dựng với mục tiêu giúp bạn có một nguồn tài liệu rõ ràng, dễ tiếp cận và thuận tiện trong quá trình học. Bạn có thể tìm theo từng môn học, xem lại đề minh họa, làm đề thi thử hoặc tham khảo các mẹo ôn tập được tổng hợp từ nhiều nguồn đáng tin cậy.
+
+      Ở đây, chúng mình tin rằng việc ôn thi không chỉ là học thuộc lòng mà còn là rèn luyện cách tư duy, kỹ năng giải đề và phân bổ thời gian hợp lý. Vì vậy, ngoài tài liệu, bạn cũng sẽ tìm thấy những chia sẻ nhỏ giúp việc học trở nên bớt áp lực và hiệu quả hơn.
+
+      👉 Hãy bắt đầu khám phá ngay hôm nay và đồng hành cùng nhau trên hành trình chinh phục kỳ thi sắp tới!</p>
+    </section>
+
+    <section id="about">
+      <h1>ℹ️ Giới thiệu</h1>
+      <p><b>JMP</b> Xin chào các bạn,
+
+      Mình tạo ra website này với mong muốn xây dựng một không gian nhỏ, nơi các bạn học sinh lớp 12 có thể dễ dàng tìm thấy tài liệu ôn tập, đề thi và những chia sẻ hữu ích cho kỳ thi THPT Quốc gia.
+
+      Trong suốt quá trình học và ôn thi, mình hiểu rằng điều khó khăn nhất không chỉ là lượng kiến thức khổng lồ mà còn là việc không biết nên bắt đầu từ đâu, tài liệu nào thì phù hợp, cách học thế nào mới hiệu quả. Vì vậy, mình muốn gom góp, sắp xếp lại những nguồn tài liệu rõ ràng, dễ sử dụng, để việc học trở nên gọn gàng và bớt áp lực hơn.
+
+      Bạn có thể tìm tài liệu cho từng môn, làm quen với đề thi thử, tham khảo đáp án chi tiết cũng như những kinh nghiệm nhỏ để tự tin hơn trong quá trình ôn tập. Mình hy vọng rằng website này sẽ giống như một “người bạn đồng hành”, giúp bạn tiết kiệm thời gian tìm kiếm, tập trung hơn vào việc học và giữ tinh thần thoải mái trên chặng đường cuối cùng của năm lớp 12</p>
+    </section>
+
+    <section id="menu">
+      <h1>📚 Menu Học Tập</h1>
+      <div class="menu">
+        <a href="toan12.html">
+          <div class="card toan">
+            <img src="https://img.icons8.com/color/96/000000/math.png" alt="Toán">
+            <h2>Toán</h2>
+          </div>
+        </a>
+        <a href="ly12.html">
+          <div class="card ly">
+            <img src="https://img.icons8.com/color/96/000000/physics.png" alt="Vật Lý">
+            <h2>Vật Lý</h2>
+          </div>
+        </a>
+        <a href="hoa12.html">
+          <div class="card hoa">
+            <img src="https://img.icons8.com/color/96/000000/test-tube.png" alt="Hóa Học">
+            <h2>Hóa Học</h2>
+          </div>
+        </a>
+        <a href="tienganh12.html">
+          <div class="card anh">
+            <img src="https://img.icons8.com/color/96/000000/abc.png" alt="Tiếng Anh">
+            <h2>Tiếng Anh</h2>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h1>📞 Liên hệ</h1>
+      <p>Email: jmdp0812@gmail.com</p>
+      <p>SĐT: 0377.88.4194</p>
+      <p>Web đang ở giai đoạn thử nghiệm. Nếu có thể, mọi người tham gia khảo sát này giúp mình nhé, mình cảm ơn nhiều ❤️</p>
+      <a href="https://forms.gle/TjLBW17PhqGwudKQ7">https://forms.gle/TjLBW17PhqGwudKQ7</a>
+
+    </section>
+  </main>
+  <script>
+  // Lấy tất cả section và link menu
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("header nav a");
+  const sideLinks = document.querySelectorAll(".sidebar a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    // Kiểm tra vị trí cuộn hiện tại
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    // Reset active và set cho menu chính
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+
+    // Reset active và set cho sidebar
+    sideLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>HÓA CƠ BẢN 12 - BÀI 2</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background: #E6E6FA;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+
+    /* Logo JMP */
+    header .logo {
+      position: absolute;
+      left: 25px;
+      font-size: 28px;
+      font-weight: bold;
+      font-family: 'Times New Roman', serif;
+      background: linear-gradient(135deg, #8e44ad, #3498db);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+      letter-spacing: 2px;
+      cursor: default;
+    }
+
+    header nav a {
+      margin: 0 30px;
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #8e44ad;
+    }
+      /* Highlight khi active */
+    nav a.active, .sidebar a.active {
+     color: #ff4d6d;
+     font-weight: bold;
+    border-bottom: 2px solid #ff4d6d;
+}
+
+
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 220px;
+      height: calc(100% - 70px);
+      background: rgba(255,255,255,0.3);
+      backdrop-filter: blur(6px);
+      padding: 20px;
+      box-sizing: border-box;
+      color: #333;
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: red;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      margin: 8px 0 8px 10px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .sidebar a:hover {
+      color: #8e44ad;
+    }
+    .sidebar b {
+      color: #c2410c;
+    }
+
+    /* Nội dung chính */
+    .main {
+      margin-left: 240px;
+      padding: 30px;
+    }
+
+    .intro {
+      background: #ede9fe;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    .intro h1 {
+      color: #4c1d95;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .intro p {
+      font-size: 17px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      text-align: center;
+      padding: 30px 40px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #4b0082;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+      min-width: 120px;
+    }
+
+    .card:hover {
+      background: #dda0dd;
+      color: white;
+      transform: translateY(-5px);
+    }
+
+    a {
+      text-decoration: none;
+    }
+      table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background: #e9ecef;
+    }
+    .image {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .image img {
+      max-width: 300px;
+      border-radius: 10px;
+    }
+    footer {
+      background: #f1f1f1;
+      text-align: center;
+      padding: 10px;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">JMP</div>
+    <nav>
+      <a href="menu.html">Trang chủ</a>
+      <a>Giới thiệu</a>
+      <a href="menu.html">Menu học tập</a>
+      <a href="lienhe.html">Liên hệ</a>
+    </nav>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>TOÁN</h2>
+    <a href="toan12.html"><b>Toán cơ bản 12</b></a>
+    <a href="bttoan.html">Bài tập Toán cơ bản 12</a>
+    <a href="nangcaonhetoan.html">Nâng cao nhẹ</a>
+    <a href="toanthucte.html">Toán thực tế</a>
+    <a href="thpttoan.html">Đề ôn thi TN THPT</a>
+
+    <h2>LÝ</h2>
+    <a href="ly12.html">Lý cơ bản 12</a>
+    <a href="btly.html">Bài tập Lý cơ bản 12</a>
+    <a href="nangcaonhely.html">Nâng cao nhẹ</a>
+    <a href="lythucte.html">Mô hình thực tế</a>
+    <a href="thptly.html">Đề ôn thi TN THPT</a>
+
+    <h2>HÓA</h2>
+    <a href="hoa12.html">Hóa cơ bản 12</a>
+    <a href="bthoa.html">Bài tập Hóa cơ bản 12</a>
+    <a href="nangcaonhehoa.html">Nâng cao nhẹ</a>
+    <a href="hoathucte.html">Mô hình thực tế</a>
+    <a href="thpthoa.html">Đề ôn thi TN THPT</a>
+
+    <h2>TIẾNG ANH</h2>
+    <a href="tienganh12.html">Từ vựng và ngữ pháp</a>
+    <a href="thpttanh.html">Đề ôn thi TN THPT</a>
+  </div>   
+   <div class="main">
+    <div class="intro">
+    <h1>XÀ PHÒNG - CHẤT GIẶT RỬA</h1>
+    <h2 style="color: #088178;">1. Xà phòng</h2>
+      <p><b>Định nghĩa:</b> Xà phòng là muối natri (hoặc kali) của các axit béo cao. Công thức chung:</p>
+      <p style="text-align:center; font-style:italic;">RCOONa hoặc RCOOK (trong đó R là gốc hiđrocacbon no hoặc không no, có mạch dài C<sub>15</sub> – C<sub>17</sub>).</p>
+      <img scr="xp.jpg" alt="xa phong">
+      
+      <h3>1.1. Điều chế</h3>
+      <p>Xà phòng được điều chế bằng <b>phản ứng xà phòng hóa– đun nóng chất béo với dung dịch kiềm</b>:</p>
+      <p style="text-align:center;">(C<sub>17</sub>H<sub>35</sub>COO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub> + 3NaOH → 3C<sub>17</sub>H<sub>35</sub>COONa + C<sub>3</sub>H<sub>5</sub>(OH)<sub>3</sub></p>
+      <p><i>Chất béo → xà phòng (muối natri của axit béo) + glycerol</i></p>
+
+      <h3>1.2. Tác dụng tẩy rửa</h3>
+      <ul>
+        <li>Phân tử xà phòng gồm 2 phần:
+          <ul>
+            <li><b>Đầu ưa nước:</b> nhóm COO<sup>-</sup>Na<sup>+</sup> phân cực → tan trong nước.</li>
+            <li><b>Đuôi kị nước:</b> gốc hiđrocacbon R dài → tan trong dầu mỡ.</li>
+          </ul>
+        </li>
+        <li>Khi giặt, đầu ưa nước hướng ra ngoài, đầu kị nước chui vào vết dầu mỡ → tạo <b>micelle</b> giúp tách vết bẩn ra khỏi vải.</li>
+      </ul>
+
+      <div style="text-align:center; margin:20px 0;">
+        <img src="https://i.imgur.com/4F5VjCo.png" alt="Cơ chế tẩy rửa của xà phòng" style="max-width:350px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
+        <p><i>Hình: Cơ chế tẩy rửa của xà phòng</i></p>
+      </div>
+
+      <h3>1.3. Ưu điểm và nhược điểm</h3>
+      <ul>
+        <li><b>Ưu điểm:</b> Dễ phân hủy sinh học → thân thiện môi trường.</li>
+        <li><b>Nhược điểm:</b> Trong nước cứng (có Ca<sup>2+</sup>, Mg<sup>2+</sup>) tạo kết tủa → giảm tác dụng giặt rửa.</li>
+      </ul>
+ <h2 style="color: #088178;">2. Chất giặt rửa tổng hợp</h2>
+      <p><b>Định nghĩa:</b> Chất giặt rửa tổng hợp (bột giặt, nước rửa bát…) là những muối natri của <b>axit sunfonic</b> hoặc <b>axit sunfat hóa</b> của ancol béo. </p>
+
+      <h3>2.1. Cấu tạo</h3>
+      <p>Công thức điển hình:</p>
+      <p style="text-align:center;">R–SO<sub>3</sub>Na hoặc ROSO<sub>3</sub>Na</p>
+      <p>Trong đó R là gốc hiđrocacbon mạch dài.</p>
+      <li>Phân tử Chất giặt rửa gồm 2 phần:
+          <ul>
+            <li><b>Đầu ưa nước:</b> nhóm SO<sub>3</sub>Na hoặc OSO<sub>3</sub>Na phân cực → tan trong nước.</li>
+            <li><b>Đuôi kị nước:</b> gốc hiđrocacbon → tan trong dầu mỡ.</li>
+          </ul>
+        </li>
+
+      <h3>2.2. Đặc điểm</h3>
+      <ul>
+        <li>Không bị kết tủa bởi ion Ca<sup>2+</sup>, Mg<sup>2+</sup> trong nước cứng → dùng được cả trong nước cứng.</li>
+        <li>Cơ chế tẩy rửa tương tự xà phòng (cũng tạo micelle).</li>
+      </ul>
+
+      <div style="text-align:center; margin:20px 0;">
+        <img src="https://i.imgur.com/t2Zxw7O.png" alt="Bột giặt tổng hợp" style="max-width:300px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.15);">
+        <p><i>Hình: Bột giặt tổng hợp</i></p>
+      </div>
+
+      <h3>2.3. Ưu điểm và nhược điểm</h3>
+      <table style="width:100%; border-collapse:collapse; text-align:center; margin:20px 0; font-size:15px;">
+        <tr style="background:#e8f9e9;">
+          <th style="border:1px solid #ccc; padding:10px;">Tiêu chí</th>
+          <th style="border:1px solid #ccc; padding:10px;">Xà phòng</th>
+          <th style="border:1px solid #ccc; padding:10px;">Chất giặt rửa tổng hợp</th>
+        </tr>
+        <tr>
+          <td style="border:1px solid #ccc; padding:10px;">Khả năng giặt rửa</td>
+          <td style="border:1px solid #ccc; padding:10px;">Giảm hiệu quả trong nước cứng</td>
+          <td style="border:1px solid #ccc; padding:10px;">Dùng tốt cả trong nước cứng</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #ccc; padding:10px;">Tính phân hủy sinh học</td>
+          <td style="border:1px solid #ccc; padding:10px;">Dễ phân hủy → thân thiện môi trường</td>
+          <td style="border:1px solid #ccc; padding:10px;">Khó phân hủy hơn → có thể gây ô nhiễm</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #ccc; padding:10px;">Ứng dụng</td>
+          <td style="border:1px solid #ccc; padding:10px;">Giặt rửa thông thường, an toàn sinh học</td>
+          <td style="border:1px solid #ccc; padding:10px;">Giặt máy, nước cứng, vệ sinh công nghiệp</td>
+        </tr>
+      </table>
+   <h2 style="color:#088178;">3. Tổng kết</h2>
+      <ul>
+        <li><b>Xà phòng:</b> muối natri/kalium của axit béo, tẩy rửa tốt nhưng kém hiệu quả trong nước cứng.</li>
+        <li><b>Chất giặt rửa tổng hợp:</b> muối natri của axit sunfonic hoặc sunfat hóa, tẩy rửa tốt trong cả nước cứng nhưng ít thân thiện môi trường.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer style="background:#f7f7f7; color:#555; text-align:center; padding:15px; margin-top:30px; border-top:1px solid #ddd;">
+    © 2025 - Bài học Hóa học 12: Xà phòng và Chất giặt rửa
+  </footer>
+</div>
+</div>
+</body>
+</html>
